@@ -1,9 +1,11 @@
 num = int(input())
-ans = (num + 1) * (num / 2)
-print(ans)
 
+res1 = num % 10
+num //= 10
+res2 = num % 10
+num //= 10
+res3 = num % 10
+num //= 10
+res4 = num % 10
 
-
-# n = int(input())
-# ans = (n * (n + 1)) / 2
-# print(ans)
+print(res4)
