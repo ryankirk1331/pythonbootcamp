@@ -297,3 +297,87 @@
 
 # # %10 get digit = 4th
 # print (n_without_last_3_digits % 10)
+
+# # HOMEWORK MOD HARD.1 // 100 OR 7 MY ANSWER WORKS WELL *******
+
+# a = int(input())
+
+# res = a % 2
+# res2 = (res + 100) - res * 94
+# print(res2)
+
+## INSTRUCTOR ANSWER **** NOT SHORTER BUT BETTER THAN MINE
+
+# n = int(input())
+
+# is_even = n % 2 == 0
+# is_odd = not is_even
+
+# # formula of 2 parts: only one of them will be activated
+# result = is_even * 100 + is_odd * 7
+
+# # In the future, with if condition, you don't need to think in a formula
+
+# print(result)
+
+# # HOMEWORK MOD.HARD.2 // MY ANSWER WORKS WELL *****************
+
+# age = int(input())
+
+# years = age // 360
+# months = (age % 360) // 30   DRY : DON'T REPEAT YOURSELF
+
+# days = (age % 360) % 30       DRY: DON'T REPEAT YOURSELF
+
+# print(years, months, days)
+
+
+# # INSTRUCTOR ANSWER $$$ //  
+
+# days = int(input())
+
+# # By integer division over 360, we know how many 360s in the days
+# # Days should be: years * 360 + remaining_days
+# # //360 gives the years. %360 remove the year
+
+# years = days // 360
+# days = days % 360       # now we remove # of complete years. One easy way is mod
+
+# # same concept as above
+# months = days // 30
+# days = days % 30
+
+# print(years, months, days)
+
+# # PRACTICE // HOW MANY DIGITS // MY ANSWER // WORKS WELL
+# # NEED TO QUIT OVERCOMPLICATING // THINK ABOUT WHAT YOU DON'T 
+# # NEED:  TO MUCH REPEATING
+
+# num = int(input())
+
+# if num < 10:
+#     print(1, 'digit')
+# elif num >= 10 and num < 100:
+#     print(2, 'digits')
+# elif num >= 100 and num < 1000:
+#     print(3, 'digits')
+# elif num >= 1000 and num < 10000:
+#     print(4, 'digits')
+# else:
+#     print(5,'+', 'digits')
+
+# # INSTRUCTOR ANSWER // BETTER NO REPEATING **************
+
+# num = int(input())
+
+# if num < 10:
+#     print(1, 'digit')
+# elif num < 100:
+#     print(2, 'digits')
+# elif num < 1000:
+#     print(3, 'digits')
+# elif num < 10000:
+#     print(4, 'digits')
+# else:
+#     print(5,'+', 'digits')
+
