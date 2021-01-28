@@ -381,3 +381,210 @@
 # else:
 #     print(5,'+', 'digits')
 
+# PRACTICE // SMALLEST OF 3 // INSTRUCTOR ANSWER ***********
+
+# a, b, c = map(int, input().split())
+
+# res = a
+
+# if res > b:
+#     res = b
+
+# if res > c:
+#     res = c
+
+# print(res)
+
+# # # My Answer for Homework Selection. 1 Easy // Works ********
+
+# a, b = map(int, input().split())
+
+# if a % 2 == 0 and b % 2 == 0:
+#     print(float(a) / float(b))
+
+# elif a % 2 != 0 and b % 2 != 0:
+#     print(a * b)
+
+# elif a % 2 == 0 and b % 2 != 0:
+#     print(a - b)
+
+# else:
+#     print(a + b)
+
+# # ## Instructor Answer for Homework Selection. 1 Easy ********
+
+
+# # a, b = map(int, input().split())
+
+# # is_a_even = a % 2 == 0
+# # is_b_even = b % 2 == 0
+
+# # if not is_a_even and not is_b_even:
+# #     print(a * b)
+# # elif is_a_even and is_b_even:
+# #     print(a / b)
+# # elif not is_a_even and is_b_even:
+# #     print(a + b)
+# # else:
+# #     print(a - b)
+
+# # Homework Sort 3 Numbers Selection.2 Easy / My Answer/ Correct*
+# # Too long *****  Instructors Answer Better for Python *********
+
+# a, b, c = map(int, input().split())
+
+# if a > b:
+#     tmp = a
+#     a = b
+#     b = tmp
+
+# if b > c:
+#     tmp = b
+#     b = c
+#     c = tmp
+
+# if a > b:
+#     tmp = a
+#     a = b
+#     b = tmp
+
+# print(a, b, c)
+
+# # # Homework Sort 3 Numbers Selection.2 Easy / Instructor Ans*
+
+
+# a, b, c = map(int, input().split())
+
+# # To understand: apply on 3 2 1
+
+# if b < a:  # Swap them:
+#     a, b = b, a
+
+# # Now a and b are in correct order: e.g. 2 3 1
+
+# if c < b:  # Swap them
+#     b, c = c, b
+
+#     # Now b, are correct
+#     # But a, may not be again with b: e.g. 2 1 3
+
+#     if b < a:      # Swap them
+#         a, b = b, a
+
+#         # Now 1 2 3
+
+# print(a, b, c)
+
+# # Maximum but Constrained / Selection.3 Easy / My Answer / Works
+
+# a, b, c = map(int, input().split())
+# res = 0
+
+# if a >= 100 and b >= 100 and c >=100:
+#     print(-1)
+# else:
+#     if a < 100:
+#         res = a
+#     if b < 100 and b > res:
+#         res = b
+#     if c < 100 and c > res:
+#         res = c
+    
+#     print(res)
+
+# # Instructor Answer #1 Selection. 3 Easy ********************
+
+# a, b, c = map(int, input().split())
+
+# # Assume numbers >= 0
+# res = -1
+# if res < a < 100:
+#     res = a
+
+# if res < b < 100:
+#     res = b
+
+# if res < c < 100:
+#     res = c
+
+# print(res)
+
+# # test: -10 -20 -30_oop
+
+# # Instructor Answer # 2 / Selection .3 Easy ***********
+
+
+# a, b, c = map(int, input().split())
+
+# if a >= 100 and b >= 100 and c >= 100:
+#     res = -1
+# else:
+#     # First, find any valid value to initalize
+#     if a < 100:
+#         res = a
+#     elif b < 100:
+#         res = b
+#     else:
+#         res = c
+
+#     if res < a < 100:
+#         res = a
+
+#     if res < b < 100:
+#         res = b
+
+#     if res < c < 100:
+#         res = c
+
+# print(res)
+
+# # test: -10 -20 -30_oop
+
+# # Homework / Selection . 4 / My Answer / Trick Question* 
+# # Conditional Statement Was NOT Needed *****************
+
+# x = int(input())
+# a, b, c, d, e = map(int, input().split())
+# big_cnt = 0
+# small_cnt = 0
+# if x > a:
+#     small_cnt += 1
+# else:
+#     big_cnt += 1
+
+# if x > b:
+#     small_cnt += 1
+# else:
+#     big_cnt += 1
+
+# if x > c:
+#     small_cnt += 1
+# else:
+#     big_cnt += 1 
+
+# if x > d:
+#     small_cnt += 1
+# else:
+#     big_cnt += 1
+
+# if x > e:
+#     small_cnt += 1
+# else:
+#     big_cnt += 1
+
+# print(small_cnt, big_cnt)
+
+# # Homework / Selection . 4 / Instructor Answer / Trick Question* 
+
+# x, a1, a2, a3, a4, a5 = map(float, input().split())
+# cnt = 0
+
+# # We can use if else, but for educational purpose:
+# cnt += a1 <= x
+# cnt += a2 <= x
+# cnt += a3 <= x
+# cnt += a4 <= x
+# cnt += a5 <= x
+
+# # clearly the 2 values just complement each others
+# print(cnt, 5 - cnt)

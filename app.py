@@ -1,31 +1,30 @@
-# # PRACTICE // HOW MANY DIGITS // MY ANSWER // WORKS WELL
-# # NEED TO QUIT OVERCOMPLICATING // THINK ABOUT WHAT YOU DON'T 
-# # NEED:  TO MUCH REPEATING
-
-# num = int(input())
-
-# if num < 10:
-#     print(1, 'digit')
-# elif num >= 10 and num < 100:
-#     print(2, 'digits')
-# elif num >= 100 and num < 1000:
-#     print(3, 'digits')
-# elif num >= 1000 and num < 10000:
-#     print(4, 'digits')
-# else:
-#     print(5,'+', 'digits')
-
-# # INSTRUCTOR ANSWER // BETTER NO REPEATING **************
-
-num = int(input())
-
-if num < 10:
-    print(1, 'digit')
-elif num < 100:
-    print(2, 'digits')
-elif num < 1000:
-    print(3, 'digits')
-elif num < 10000:
-    print(4, 'digits')
+x = int(input())
+a, b, c, d, e = map(int, input().split())
+big_cnt = 0
+small_cnt = 0
+if x > a:
+    small_cnt += 1
 else:
-    print(5,'+', 'digits')
+    big_cnt += 1
+
+if x > b:
+    small_cnt += 1
+else:
+    big_cnt += 1
+
+if x > c:
+    small_cnt += 1
+else:
+    big_cnt += 1 
+
+if x > d:
+    small_cnt += 1
+else:
+    big_cnt += 1
+
+if x > e:
+    small_cnt += 1
+else:
+    big_cnt += 1
+
+print(small_cnt, big_cnt)
