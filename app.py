@@ -1,30 +1,20 @@
-x = int(input())
-a, b, c, d, e = map(int, input().split())
-big_cnt = 0
-small_cnt = 0
-if x > a:
-    small_cnt += 1
-else:
-    big_cnt += 1
+s1, e1, s2, e2 = map(int, input().split())
+a, b = 0, 0
 
-if x > b:
-    small_cnt += 1
-else:
-    big_cnt += 1
+if s1 > e2 or s2 > e1:
+    print(-1)
 
-if x > c:
-    small_cnt += 1
 else:
-    big_cnt += 1 
+    if s1 > s2:
+        a = s1
+    elif s2 > s1:
+        a = s2
 
-if x > d:
-    small_cnt += 1
-else:
-    big_cnt += 1
+    if e1 < e2:
+        b = e1
+    
+    elif e2 < e1:
+        b = e2
 
-if x > e:
-    small_cnt += 1
-else:
-    big_cnt += 1
-
-print(small_cnt, big_cnt)
+print(a, b)
+         

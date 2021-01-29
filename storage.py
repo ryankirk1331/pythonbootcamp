@@ -396,6 +396,7 @@
 # print(res)
 
 # # # My Answer for Homework Selection. 1 Easy // Works ********
+# # # should have saved is_even to variable see below **********
 
 # a, b = map(int, input().split())
 
@@ -476,7 +477,7 @@
 # print(a, b, c)
 
 # # Maximum but Constrained / Selection.3 Easy / My Answer / Works
-
+# # Share this code with Mostafa ******************************!$
 # a, b, c = map(int, input().split())
 # res = 0
 
@@ -588,3 +589,257 @@
 
 # # clearly the 2 values just complement each others
 # print(cnt, 5 - cnt)
+
+
+
+# # Homework Swlection. 1 Medium ********** Instructor Answer//
+#  # Mine was similar but did not work ************************
+
+# # Read first number
+# result = float(input())
+
+# # Read other 9 numbers
+# num = float(input())
+# if result < num:
+#     result = num
+
+# num = float(input())
+# if result < num:
+#     result = num
+
+# num = float(input())
+# if result < num:
+#     result = num
+
+# num = float(input())
+# if result < num:
+#     result = num
+
+# num = float(input())
+# if result < num:
+#     result = num
+
+# num = float(input())
+# if result < num:
+#     result = num
+
+# num = float(input())
+# if result < num:
+#     result = num
+
+# num = float(input())
+# if result < num:
+#     result = num
+
+# num = float(input())
+# if result < num:
+#     result = num
+
+# print(result)
+
+# # Homework // Selection / Medium . 2 // My Answer // Works
+
+# t = int(input())
+# cnt = t
+# num = int(input())
+# cnt -= 1
+# res = num
+
+# num = int(input())
+# cnt -= 1
+# if num > res:
+#     res = num
+# if cnt == 0:
+#     print(res)
+
+# num = int(input())
+# cnt -= 1
+# if num > res:
+#     res = num
+# if cnt == 0:
+#     print(res)
+
+# num = int(input())
+# cnt -= 1
+# if num > res:
+#     res = num
+# if cnt == 0:
+#     print(res)
+
+# num = int(input())
+# cnt -= 1
+# if num > res:
+#     res = num
+# if cnt == 0:
+#     print(res)
+
+# num = int(input())
+# cnt -= 1
+# if num > res:
+#     res = num
+# if cnt == 0:
+#     print(res)
+
+# num = int(input())
+# cnt -= 1
+# if num > res:
+#     res = num
+# if cnt == 0:
+#     print(res)
+
+# num = int(input())
+# cnt -= 1
+# if num > res:
+#     res = num
+# if cnt == 0:
+#     print(res)
+
+# num = int(input())
+# cnt -= 1
+# if num > res:
+#     res = num
+# if cnt == 0:
+#     print(res)
+
+# num = int(input())
+# cnt -= 1
+# if num > res:
+#     res = num
+# if cnt == 0:
+#     print(res)
+
+
+# # Homework Selection/ medium . 2 // Instructor Answer *******
+
+
+# cnt = int(input())
+
+# # read first number
+# result = float(input())
+# cnt -= 1
+
+# # read UP to 9 times
+# if cnt > 0:
+#     num = float(input())
+#     cnt -= 1
+#     if num > result:
+#         result = num
+
+# if cnt > 0:
+#     num = float(input())
+#     cnt -= 1
+#     if num > result:
+#         result = num
+
+# if cnt > 0:
+#     num = float(input())
+#     cnt -= 1
+#     if num > result:
+#         result = num
+
+# if cnt > 0:
+#     num = float(input())
+#     cnt -= 1
+#     if num > result:
+#         result = num
+
+# if cnt > 0:
+#     num = float(input())
+#     cnt -= 1
+#     if num > result:
+#         result = num
+
+# if cnt > 0:
+#     num = float(input())
+#     cnt -= 1
+#     if num > result:
+#         result = num
+
+# if cnt > 0:
+#     num = float(input())
+#     cnt -= 1
+#     if num > result:
+#         result = num
+
+# if cnt > 0:
+#     num = float(input())
+#     cnt -= 1
+#     if num > result:
+#         result = num
+
+# if cnt > 0:
+#     num = float(input())
+#     cnt -= 1
+#     if num > result:
+#         result = num
+
+
+# print(result)
+
+
+# # # Homework / Selection Intervals / Hard . 1 . My Answer *****
+#  # Another trick question / Conditionals not needed ******
+# # Insructor Used Boolean Logic Instead // Better than mine
+
+# x, s1, e1, s2, e2, s3, e3 = map(int, input().split())
+# cnt = 0
+
+# if x >= s1 and x <= e1:
+#     cnt += 1
+
+# if x >= s2 and x <= e2:
+#     cnt += 1
+
+# if x >= s3 and x <= e3:
+#     cnt += 1
+
+# print(cnt)
+
+# #  Homework / Selection Intervals / Hard . 1 . Instructor.anw
+
+# x, s1, e1, s2, e2, s3, e3 = map(int, input().split())
+
+# #Read start and end, see if X is between them or not, times
+# cnt = 0
+# cnt += s1 <= x <= e1
+# cnt += s2 <= x <= e2
+# cnt += s3 <= x <= e3
+
+# print(cnt)
+
+# # Homework Selection / Hard . 2 // My Answer / Works Well***
+#  # Instructor Solved without a.b variable ******************
+# s1, e1, s2, e2 = map(int, input().split())
+# a, b = 0, 0
+
+# if s1 > e2 or s2 > e1:
+#     print(-1)
+
+# else:
+#     if s1 > s2:
+#         a = s1
+#     elif s2 > s1:
+#         a = s2
+
+#     if e1 < e2:
+#         b = e1
+    
+#     elif e2 < e1:
+#         b = e2
+
+# print(a, b)
+         
+# # Instructor Answer // Less Variables than mine so better!!!!
+
+# s1, e1, s2, e2 = map(int, input().split())
+
+# if e1 < s2 or e2 < s1:
+#     print(-1)		# One of them ends before start of the another
+# else:
+#     if s1 < s2:
+#         s1 = s2	    # maximum of (s1, s2)
+#     if e1 > e2:
+#         e1 = e2	    # minimum of (e1, e2)
+
+#     print(s1, e1)
+
