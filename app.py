@@ -1,20 +1,17 @@
-s1, e1, s2, e2 = map(int, input().split())
-a, b = 0, 0
+num = int(input())
+i = num
+cnt = 1
+if num == 0:
+    cnt = 1 
 
-if s1 > e2 or s2 > e1:
-    print(-1)
+elif num < 0:
+    i *= -1
 
-else:
-    if s1 > s2:
-        a = s1
-    elif s2 > s1:
-        a = s2
+while i > 0:
+    i //= 10
+    cnt +=1
+    i -= 1
 
-    if e1 < e2:
-        b = e1
-    
-    elif e2 < e1:
-        b = e2
+print(f"# of digits in {num} = {cnt}")
 
-print(a, b)
          
