@@ -1152,3 +1152,76 @@
 #         print(cnt, end=' ')
 
 #     cnt += 1
+
+# # Homework While Loops Medium / Special Multiples 2 / My Answer ******
+
+# num = int(input())
+# x = 0
+# while(num > 0):
+#     x += 1
+#     if(x % 3 == 0 and x % 4 != 0):
+#         print(x, end=' ')
+#         num -= 1
+
+
+# ## Homework While Loops Medium / Special Multiples 2 / Instructor ******
+
+# n = int(input())
+
+# cnt = 0
+# current_number = 0
+
+# while cnt < n:
+#     if current_number % 3 == 0 and current_number % 4 != 0:
+#         print(current_number, end=' ')
+#         cnt += 1
+
+#     current_number += 1
+
+# # Homework While Loops / Minimum of Values / My Answer / works / I 
+# # But I only wanted to use two loops / couldn't figure it out
+
+# test = int(input())
+
+# while test > 0:
+#     n = int(input())
+#     test -= 1
+#     ans = 0
+#     while n > 0:
+#         x = int(input())
+#         n -= 1
+#         ans = x
+        
+#         while n > 0:
+#             y = int(input())
+#             n -= 1
+#             if y <= x:
+#                 ans = y
+    
+#     print(f"Min value is {ans}")
+
+# # Instructor Answer with Only two loops ****************************
+# 
+# total_cases = int(input())
+
+# # Outer loop for cases
+# while total_cases > 0:
+#     numbers_cnt = int(input())
+
+#     pos = 0
+#     result = 0
+
+#     # Inner loop to read a case
+#     while pos < numbers_cnt:
+#         value = int(input())
+
+#         if pos == 0:
+#             result = value
+#         elif result > value:
+#             result = value
+
+#         pos += 1
+
+#     print('Min value is:', result)
+#     total_cases -= 1    
+    
