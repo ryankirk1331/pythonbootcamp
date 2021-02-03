@@ -845,3 +845,428 @@
 
 #     print(s1, e1)
 
+# # Example of formatted String *************
+
+# num = int(input())
+# i = num
+# cnt = 1
+# if num == 0:
+#     cnt = 1 
+
+# elif num < 0:
+#     i *= -1
+
+# while i > 0:
+#     i //= 10
+#     cnt +=1
+#     i -= 1
+
+# print(f"# of digits in {num} = {cnt}")
+
+# # Practice // Left Angled Triangle//
+# # Note The Printing ****************
+
+# n = int(input())
+# i = 1
+
+# while i <= n:
+#     cnt = 0
+#     while cnt < i:
+#         print('*',end ='')
+#         cnt += 1
+#     print()
+#     i += 1
+
+# # # Print Range My Answer *******************
+
+# x, y = map(int, input().split())
+# ind = x
+
+# while ind >= x and ind <= y:
+#     print(ind)
+#     ind += 1
+
+# # # Print Range Instructor Answer **********
+
+# start, end = map(int, input().split())
+
+# while start <= end:
+#     print(start)
+#     start += 1
+
+# # Repeat Me / My Answer ******************
+
+# s = str(input())
+# n = int(input())
+
+# while n > 0:
+#     print(s,end='')
+#     n -= 1
+
+# # # Repeat Me / Instructor Answer ***********
+
+# n, str = input().split()
+# n = int(n)
+
+# while n:
+#     print(str, end='')
+#     n -= 1
+
+# # Left Angled Triangle / My Answer **********
+
+# n = int(input())
+
+# while n > 0:
+#     cnt = n
+#     while cnt > 0:
+#         print('*',end='')
+#         cnt-=1
+#     print()    
+#     n-=1
+
+# # Left Angled Triangle / Instructor Answer **
+
+# n = int(input())
+
+# row = n
+# while row > 0:
+#     stars_count = 1
+
+#     while stars_count <= row:
+#         print('*', end='')
+#         stars_count += 1
+
+#     print()
+#     row -= 1
+
+# # Special Average // My Answer **************************************
+
+# odd_sum, even_sum, odd_cnt, even_cnt = 0, 0, 0, 0
+# n = int(input())
+
+# i = 0
+# while i < n:
+#     x = float(input())
+#     i += 1
+    
+#     if i % 2 != 0:
+#         odd_sum += x
+#         odd_cnt += 1
+        
+#     elif i % 2 == 0:
+#         even_sum += x
+#         even_cnt += 1
+
+# print(odd_sum / odd_cnt, even_sum / even_cnt)
+
+# # Special Average / Instructors Answer *******************************
+
+# even_sum, odd_sum, even_count, odd_count = 0, 0, 0, 0
+# n = int(input())
+
+# cnt = 1
+# while cnt <= n:
+#     value = float(input())
+
+#     if cnt % 2 == 0:    # even position
+#         even_sum += value
+#         even_count += 1
+#     else:               # odd position
+#         odd_sum += value
+#         odd_count += 1
+
+#     cnt += 1
+
+# print(odd_sum / odd_count, even_sum / even_count)
+
+# # Application #1 // It works, but some things I don't know how to do!
+
+# n = int(input("Press 1 to begin"))
+# while n != 3:
+#     print("Menu:")
+#     print("Enter 1 to sum numbers from 1 to N")
+#     print("Enter 2 to evaluate simple 2 number expression (e.g. 2 + 3")
+#     print("Enter 3 to End the Program")
+#     n = int(input())
+
+#     if n < 0 or n > 3:
+#         print("Invalid Input...Try Again")
+
+#     if n == 1:
+#         a = int(input())
+#         print(a * (a + 1) / 2)
+#         continue
+
+#     if n == 2:
+#         print("Enter a simple expression")
+#         x = input()
+#         print(f"Expression value is {x}")
+#         continue
+
+#     if n == 3:
+#         print()
+#         break
+# print("End of Program")
+
+# # Application #1 // Instructors Solution *****************************
+
+# while True:
+#     print('\n\nMenu:')
+#     print('Enter 1 to sum numbers 1 to N')
+#     print('Enter 2 to evaluate simple 2 numbers expression (e.g. 2+3')
+#     print('Enter 3 to end the rogram')
+
+#     user_inp = input("\nEnter Choice from 1 to 3: ")
+    
+#     if user_inp !='1' and user_inp != '2' and user_inp != '3':
+#         print('Invalid Input...Try again')
+#         continue
+    
+#     if user_inp == '1':
+#         n = int(input('Enter a number: '))
+#         sum = (n * (n + 1))//2
+#         print('Sum from 1 to', n, 'is', sum)
+#     elif user_inp == '2':
+#         num1, operation, num2 = input('Enter a simple expression: ').split()
+#         num1, num2 = float(num1), float(num2)
+
+#         result = None
+
+#         if operation == '+':
+#             result = num1 + num2
+#         elif operation == '-':
+#             result = num1 - num2
+#         elif operation == '*':
+#             result = num1 * num2
+#         elif operation == '**':
+#             result = num1 ** num2
+#         else:
+#             if num2 == 0:
+#                 print('Not a valid operation!')
+#             elif operation == '/':
+#                 result = num1 / num2
+#             else:
+#                 result = num1 // num2
+        
+#         if result != None:
+#             print('Expression value is ', result)
+#     else:
+#         break
+
+# # Homework While Loops Medium // My Answer // Print a Diamond ******
+# # Mine // Works but there are way too many variables not efficient ***
+
+# n = int(input())
+# cnt = 1
+# x = n
+# cnt2 = n * 2 -1
+# spcs = 0
+# while n > 0:
+#     strs_cnt = 0
+#     spc_cnt = n - 1
+    
+#     while spc_cnt > 0:
+#         print(' ',end='')
+#         spc_cnt -= 1
+    
+#     while strs_cnt < cnt:
+#         print('*',end='')
+#         strs_cnt += 1
+#     print()
+#     cnt += 2
+#     n -= 1
+
+# while x > 0:
+#     strs_cnt = 0
+#     spc_cnt = 0
+    
+#     while spc_cnt < spcs:
+#         print(' ',end='')
+#         spc_cnt +=1
+
+#     while strs_cnt < cnt2:
+#         print('*',end='')
+#         strs_cnt += 1
+    
+#     print()
+#     spcs +=1
+#     cnt2 -= 2
+#     x -= 1
+
+# # Instructor Answer // Print A Diamond // Way Better than mine ******
+
+
+# n = int(input())
+
+
+# row = 1
+# while row <= n:
+#     # Print N - rows spaces
+#     stars_count = 1
+#     while stars_count <= n - row:
+#         print(' ', end='')
+#         stars_count += 1
+
+#     # Print 2*rows-1 spaces
+#     stars_count = 1
+#     while stars_count <= 2 * row-1:
+#         print('*', end='')
+#         stars_count += 1
+
+#     print()
+#     row += 1
+
+
+# row = n
+# while row > 0:
+#     # Print N - rows spaces
+#     stars_count = 1
+#     while stars_count <= n - row:
+#         print(' ', end='')
+#         stars_count += 1
+
+#     # Print 2*rows-1 spaces
+#     stars_count = 1
+#     while stars_count <= 2 * row-1:
+#         print('*', end='')
+#         stars_count += 1
+
+#     print()
+#     row -= 1
+
+# # Homework While Loops multiples // My Answer // Works Well ********
+
+# n = int(input())
+# num = 0
+# while num <= n:
+#     if num % 3 == 0 and num % 4 == 0 or num % 8 == 0:
+#         print(num, end=' ')
+#     num +=1
+
+# # While loops Multiples // Instructor Answer ***************************
+
+# n = int(input())
+
+# cnt = 0
+
+# while cnt <= n:
+#     if cnt % 8 == 0 or cnt % 3 == 0 and cnt % 4 == 0:
+#         print(cnt, end=' ')
+
+#     cnt += 1
+
+# # Homework While Loops Medium / Special Multiples 2 / My Answer ******
+
+# num = int(input())
+# x = 0
+# while(num > 0):
+#     x += 1
+#     if(x % 3 == 0 and x % 4 != 0):
+#         print(x, end=' ')
+#         num -= 1
+
+
+# ## Homework While Loops Medium / Special Multiples 2 / Instructor ******
+
+# n = int(input())
+
+# cnt = 0
+# current_number = 0
+
+# while cnt < n:
+#     if current_number % 3 == 0 and current_number % 4 != 0:
+#         print(current_number, end=' ')
+#         cnt += 1
+
+#     current_number += 1
+
+# # Homework While Loops / Minimum of Values / My Answer / works / I 
+# # But I only wanted to use two loops / couldn't figure it out
+
+# test = int(input())
+
+# while test > 0:
+#     n = int(input())
+#     test -= 1
+#     ans = 0
+#     while n > 0:
+#         x = int(input())
+#         n -= 1
+#         ans = x
+        
+#         while n > 0:
+#             y = int(input())
+#             n -= 1
+#             if y <= x:
+#                 ans = y
+    
+#     print(f"Min value is {ans}")
+
+# # Instructor Answer with Only two loops ****************************
+# 
+# total_cases = int(input())
+
+# # Outer loop for cases
+# while total_cases > 0:
+#     numbers_cnt = int(input())
+
+#     pos = 0
+#     result = 0
+
+#     # Inner loop to read a case
+#     while pos < numbers_cnt:
+#         value = int(input())
+
+#         if pos == 0:
+#             result = value
+#         elif result > value:
+#             result = value
+
+#         pos += 1
+
+#     print('Min value is:', result)
+#     total_cases -= 1    
+    
+
+# #Homework While Loops Hard // My Answer // Didnt work / Study syntax!!!!!!!!!!!!!!!!!!!!!!!!
+
+# n = int(input())
+
+# while n > 0:
+#     phr = str(input())
+#     n-=1
+    
+
+#     if phr == 'no' or 'No' or 'NO' or 'nO' or 'on' or 'On' or 'ON' or 'oN':
+#         ans = phr
+#         print(ans)
+
+# #Homework While Loops Hard // Instructor Answer ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+# total_cases = int(input())
+
+# pos = 0
+
+# while pos < total_cases:
+#     str = input()
+
+#     # there are 8 different ways to make 2 letters no in lower/upper cases
+#     if str == "no" or str == "No" or str == "nO" or str == "NO" or \
+#         str == "on" or str == "oN" or str == "On" or str == "ON":
+#         print('Match:', str)
+
+#     pos += 1
+
+# # # Homework While LOops Hard #2 // Couldn't Solve *********
+
+# N = int(input())
+
+# number = 0
+
+# while N > 0:
+#     last_digits = N % 10
+#     N //= 10    # remove last digit
+
+#     number = number * 10 + last_digits
+
+# print(number, number * 3)
