@@ -1,9 +1,14 @@
-n = int(input())
-cnt = 0
-while n > 0:
-    last_digit = n % 10
-    n //= 10
-    cnt += 1
-    n -= 1
-print(cnt)
+N = int(input())
+
+number = 0
+
+while N > 0:
+    last_digits = N % 10
+    N //= 10    # remove last digit
+
+    number = number * 10 + last_digits
+
+print(number, number * 3)
+
+
     
