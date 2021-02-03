@@ -1258,7 +1258,7 @@
 #     pos += 1
 
 # # # Homework While LOops Hard #2 // Couldn't Solve *********
-
+# # #!!!!!!!!!!!!!!!!!!!!!!!! This one is really Cool!!!!!!!!!
 # N = int(input())
 
 # number = 0
@@ -1267,8 +1267,59 @@
 #     last_digits = N % 10
 #     N //= 10    # remove last digit
 
-#     number = number * 10 + last_digits
+#     number = number * 10 + last_digits    N = 321 number => 1 / 12 / 123
 
 # print(number, number * 3)
 
 # # TEST LINE FOR NEXT COMMITT // TRYING TO PUSH
+
+# # Homework While Loops Hard / Multiplication Table / My Answer****
+
+# N, M = map(int, input().split())
+# x = 1
+
+# while x <= N:
+#     y = 1
+#     while y <= M:
+#         print(x, 'x', y, '=', (x*y))
+#         y += 1
+#     x+=1
+
+# # Multiplication Table Instructors Answer
+# # Exactly The Same as mine !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# n, m = map(int, input().split())
+
+# cnt_n = 1
+
+# # first col loop
+# while cnt_n <= n:
+#     cnt_m = 1
+
+#     # second col loop
+#     while cnt_m <= m:
+#         print(cnt_n, " x ", cnt_m, " = ", cnt_n * cnt_m)
+#         cnt_m += 1
+
+#     cnt_n += 1
+
+# # While Loops Hard: Special Sum / My Answer Take 1
+
+# T = int(input())
+
+# while T > 0:
+#     N = int(input())
+#     T -= 1
+#     cnt = 1
+#     ans = 0
+#     while N > 0:
+#         num = int(input())
+#         N -= 1
+#         i = 1
+#         res = 1
+#         while i <= cnt:
+#             res *= num
+#             i += 1
+#         cnt += 1
+#         ans += res
+#     print(ans)
