@@ -1,18 +1,10 @@
-T = int(input())
+# # Practice / Pair of Numbers / My Answer *********
 
-while T > 0:
-    N = int(input())
-    T -= 1
-    cnt = 1
-    ans = 0
-    while N > 0:
-        num = int(input())
-        N -= 1
-        i = 1
-        res = 1
-        while i <= cnt:
-            res *= num
-            i += 1
-        cnt += 1
-        ans += res
-    print(ans)
+N, M, sum = map(int, input().split())
+res = 0
+
+for a in range(1, N+1):
+    for b in range(1, M, 1):
+        if a + b == sum:
+            res +=1
+print(res)

@@ -1323,3 +1323,96 @@
 #         cnt += 1
 #         ans += res
 #     print(ans)
+
+# # # While Loops Hard: Special Sum / My Answer Take 1
+# # Identical to Instructors Answer
+
+# T = int(input())
+
+# while T > 0:
+#     N = int(input())
+#     T -= 1
+#     cnt = 1
+#     ans = 0
+#     while N > 0:
+#         num = int(input())
+#         N -= 1
+#         i = 1
+#         res = 1
+#         while i <= cnt:
+#             res *= num
+#             i += 1
+#         cnt += 1
+#         ans += res
+#     print(ans)
+
+# # # While Loops 4 hard// Instructor Answer // Special Sum**************************
+# # We need 3 nested loops
+# # loop over test cases
+# #   loop over reading numbers
+# #       loop to repeat the number K times (multiplication)
+
+
+# T = int(input())
+# # Loop on cases
+# while T > 0:
+#     N = int(input())
+#     cnt_N, sum = 1, 0
+
+#     # loop over reading a case
+#     while cnt_N <= N:
+#         value = int(input())
+#         cnt_deep, result = cnt_N, 1
+
+#         # Loop to compute the sum: a, b*b, c*c*c, d*d*d*d, e*e*e*e*e……
+#         while cnt_deep > 0:
+#             result *= value
+#             cnt_deep -= 1
+
+#         sum += result
+#         cnt_N += 1
+
+#     print('Sum is', sum)
+#     T -= 1
+
+
+# """
+# input
+# 2
+# 3   
+# 5 
+# 7 
+# 2
+# 4  
+# 1 
+# 2 
+# 3 
+# 4
+
+
+# # Practice / Special Sum Repeated With for loop *******
+
+# total_cases = int(input())
+
+# for case in range(total_cases):
+#     N, sum = int(input()), 0
+
+#     for pos in range(N):
+#         value, result = int(input()), 1
+
+#         for it in range(pos + 1):
+#             result *= value
+#         sum += result
+#     print('Sum is', sum)
+
+# # Practice / Pair of Numbers / My Answer *********
+# # Same As Instructors*****************************
+
+# N, M, sum = map(int, input().split())
+# res = 0
+
+# for a in range(1, N+1):
+#     for b in range(1, M, 1):
+#         if a + b == sum:
+#             res +=1
+# print(res)
