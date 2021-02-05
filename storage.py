@@ -831,8 +831,6 @@
          
 # # Instructor Answer // Less Variables than mine so better!!!!
 
-
-
 # s1, e1, s2, e2 = map(int, input().split())
 
 # if e1 < s2 or e2 < s1:
@@ -1225,101 +1223,5 @@
 #         pos += 1
 
 #     print('Min value is:', result)
-#     total_cases -= 1    
+#     total_cases -= 1    n
     
-
-# #Homework While Loops Hard // My Answer // Didnt work / Study syntax!!!!!!!!!!!!!!!!!!!!!!!!
-
-# n = int(input())
-
-# while n > 0:
-#     phr = str(input())
-#     n-=1
-    
-
-#     if phr == 'no' or 'No' or 'NO' or 'nO' or 'on' or 'On' or 'ON' or 'oN':
-#         ans = phr
-#         print(ans)
-
-# #Homework While Loops Hard // Instructor Answer ^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-# total_cases = int(input())
-
-# pos = 0
-
-# while pos < total_cases:
-#     str = input()
-
-#     # there are 8 different ways to make 2 letters no in lower/upper cases
-#     if str == "no" or str == "No" or str == "nO" or str == "NO" or \
-#         str == "on" or str == "oN" or str == "On" or str == "ON":
-#         print('Match:', str)
-
-#     pos += 1
-
-# # # Homework While LOops Hard #2 // Couldn't Solve *********
-# # #!!!!!!!!!!!!!!!!!!!!!!!! This one is really Cool!!!!!!!!!
-# N = int(input())
-
-# number = 0
-
-# while N > 0:
-#     last_digits = N % 10
-#     N //= 10    # remove last digit
-
-#     number = number * 10 + last_digits    N = 321 number => 1 / 12 / 123
-
-# print(number, number * 3)
-
-# # TEST LINE FOR NEXT COMMITT // TRYING TO PUSH
-
-# # Homework While Loops Hard / Multiplication Table / My Answer****
-
-# N, M = map(int, input().split())
-# x = 1
-
-# while x <= N:
-#     y = 1
-#     while y <= M:
-#         print(x, 'x', y, '=', (x*y))
-#         y += 1
-#     x+=1
-
-# # Multiplication Table Instructors Answer
-# # Exactly The Same as mine !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-# n, m = map(int, input().split())
-
-# cnt_n = 1
-
-# # first col loop
-# while cnt_n <= n:
-#     cnt_m = 1
-
-#     # second col loop
-#     while cnt_m <= m:
-#         print(cnt_n, " x ", cnt_m, " = ", cnt_n * cnt_m)
-#         cnt_m += 1
-
-#     cnt_n += 1
-
-# # While Loops Hard: Special Sum / My Answer Take 1
-
-# T = int(input())
-
-# while T > 0:
-#     N = int(input())
-#     T -= 1
-#     cnt = 1
-#     ans = 0
-#     while N > 0:
-#         num = int(input())
-#         N -= 1
-#         i = 1
-#         res = 1
-#         while i <= cnt:
-#             res *= num
-#             i += 1
-#         cnt += 1
-#         ans += res
-#     print(ans)
