@@ -1477,3 +1477,118 @@
 #         else:
 #             print(" ", end='')
 #     print()
+
+# # For Loops / Find Special Pairs Slow / My Answer / Tiny Bit of Help.
+
+# cnt = 0
+# for x in range(50, 301, 1):
+#     for y in range(70, 401, 1):
+#         if x < y and (x + y) % 7 == 0:
+#             cnt += 1
+        
+# print(cnt)
+
+# #  For Loops / Find Special Pairs Efficient / Ins. Answer ************
+
+# cnt = 0
+
+# for x in range(50, 301):
+#     '''
+#     Let's speed it
+#     We can always start from the right condition maximum(70, x+1)
+#         Saves some Y iterations
+#         Remove the x < y condition
+#     '''
+#     start = max(70, x+1)
+
+#     for y in range(start, 401):
+#         if (x + y) % 7 == 0:
+#             cnt += 1
+
+# print(cnt)
+
+# # For Loops Find All Quadruples My Answer 3 Loops *****************
+
+# cnt = 0
+
+# for a in range(1, 201, 1):
+#     for b in range(1, 201, 1):
+#         for c in range(1, 201, 1):
+#             d = (a + b) - c
+#             if d >= 1 and d <= 200:
+#                 cnt+=1
+# print(cnt)
+
+# # For Loops Find All Quadruples Ins Answer 4 Loops *****************
+
+# count = 0
+# for a in range(1, 201):
+#     for b in range(1, 201):
+#         for c in range(1, 201):
+#             for d in range(1, 201):
+#                 count += (a + b == c + d)
+
+# print(count)
+
+# # For Loops Find All Quadruples Ins Answer 3 Loops *****************
+
+# count = 0
+# for a in range(1, 201):
+#     for b in range(1, 201):
+#         for c in range(1, 201):
+#             d = a + b - c   # lets' compute d
+#             if 1 <= d <= 200:
+#                 count += 1
+
+# print(count)
+
+# # For Loops Homework / Is Prime My Answer ***************************
+
+# n = int(input())
+# ans = str
+
+# for i in range(n, 1, -1):
+#     if n % i != 0:
+#         ans = "Yes"
+#     else:
+#         ans = "No"
+
+# print(ans)
+
+# # For Loops Homework / Is Prime Ins Answer ***************************
+
+#  # I Forgot to Exlude 1 From Input ***********************************
+
+# number = int(input())
+
+# if number <= 1:
+#     print("NO")
+# else:
+#     is_ok = True
+
+#     for i in range(2, number):
+#         if number % i == 0:
+#             is_ok = False
+#             break
+
+#     if is_ok:
+#         print("YES")
+#     else:
+#         print("NO")
+
+# # Homework For loops 5 / Print the prime Numbers / Instructor Answer
+
+# max_num = int(input())
+
+# for number in range(2, max_num+1):
+#     is_ok = True
+
+#     for i in range(2, number):
+#         if number % i == 0:
+#             is_ok = False
+#             break
+
+#     if is_ok:
+#         print(number, end=' ')
+
+    

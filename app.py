@@ -1,19 +1,36 @@
-# # For Loops / Find Special Pairs Slow / My Answer / Tiny Bit of Help.
+# # For Loops / Digits Sum / My Answer / Doesn;t work at all !!!!!!!!!
+# # I Saved it just to compare Logic between it and working code!!!!!!
 
-# cnt = 0
-# for x in range(50, 301, 1):
-#     for y in range(70, 401, 1):
-#         if x < y and (x + y) % 7 == 0:
-#             cnt += 1
-        
-# print(cnt)
+# n, a, b = map(int, input().split())
+# ans = 0
+# c = 0
+# res = 0
+# for i in range(1, n+1):
+#     if i < 10 and i >= a and i <= b:
+#         ans += i
+#     elif i >= 10:
+#         while i > 0:
+#             c = i % 10
+#             i //= 10
+#             res +=c 
+#             if res >= a and res <= b:
+#                 ans += i
+# print(ans)
 
-# #  For Loops / Find Special Pairs Efficient / My Answer **************
+#  # Instructors Answer **********************************************
 
-cnt = 0
-for x in range(50, 301, 1):
-    for y in range(70, 401, 1):
-        if x < y and (x + y) % 7 == 0:
-            cnt += 1
-        
-print(cnt)
+# n, a, b = map(int, input().split())
+# total = 0
+
+# for i in range(1, n+1):
+#     tmp = i     # be careful - take copy
+#     digits_sum = 0
+
+#     while tmp > 0:
+#         digits_sum += tmp % 10
+#         tmp //= 10
+
+#     if a <= digits_sum <= b:
+#         total += i
+
+# print(total)
