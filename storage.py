@@ -831,8 +831,6 @@
          
 # # Instructor Answer // Less Variables than mine so better!!!!
 
-
-
 # s1, e1, s2, e2 = map(int, input().split())
 
 # if e1 < s2 or e2 < s1:
@@ -1225,6 +1223,8 @@
 #         pos += 1
 
 #     print('Min value is:', result)
+#     total_cases -= 1    n
+    
 #     total_cases -= 1    
     
 
@@ -1416,3 +1416,251 @@
 #         if a + b == sum:
 #             res +=1
 # print(res)
+
+# # For Loops Practice Pair of Numbers Faster / My Answer Same as ins.
+# # # **********************************************************
+# N, M, sum = map(int, input().split())
+# res = 0
+
+# for a in range(1, N+1):
+#     b = sum - a
+#     if b <= M and b >=1:
+#             res +=1
+# print(res)
+
+# # # Triples of Numbers For Loops / The Slow Way ************************
+# # I WAS ABLE TO COMPLETE THIS ONE ****************************
+# N, M, W = map(int, input().split())
+# res = 0
+
+# for a in range(1, N+1):
+#     for b in range(a, M+1):
+#         for c in range(1, W + 1):
+#             if a + b <= c:
+#                 res += 1
+# print(res)
+
+# # Triples Of Numbers / The Efficient Way / **************************
+# # NEED TO REPEAT THIS ONE LATER IN THE COURSE **********************
+# N, M, W = map(int, input().split())
+# res = 0
+
+# for a in range(1, N+1):
+#     for b in range(a, M+1):
+#         c = a + b 
+#         if 1 <= c <= W:
+#             res += W - c + 1
+
+# print(res)
+
+# # For Loops / Print An X / My Answer ********************************
+
+# N = int(input())
+
+# for a in range(1, N+1):
+#     for i in range(1, N+1):
+#         if i == a or i == (N+1) -a:
+#             print('*',end='')
+#         else:
+#             print(' ',end='')
+#     print()
+
+# # For Loops / Print An X / Ins. Answer ********************************
+# # Both Work Well though Slightly Different ***************************
+
+# n = int(input())
+
+# for i in range(n):
+#     for j in range(n):
+#         if i == j or n - i - 1 == j:
+#             print("*", end='')
+#         else:
+#             print(" ", end='')
+#     print()
+
+# # For Loops / Find Special Pairs Slow / My Answer / Tiny Bit of Help.
+
+# cnt = 0
+# for x in range(50, 301, 1):
+#     for y in range(70, 401, 1):
+#         if x < y and (x + y) % 7 == 0:
+#             cnt += 1
+        
+# print(cnt)
+
+# #  For Loops / Find Special Pairs Efficient / Ins. Answer ************
+
+# cnt = 0
+
+# for x in range(50, 301):
+#     '''
+#     Let's speed it
+#     We can always start from the right condition maximum(70, x+1)
+#         Saves some Y iterations
+#         Remove the x < y condition
+#     '''
+#     start = max(70, x+1)
+
+#     for y in range(start, 401):
+#         if (x + y) % 7 == 0:
+#             cnt += 1
+
+# print(cnt)
+
+# # For Loops Find All Quadruples My Answer 3 Loops *****************
+
+# cnt = 0
+
+# for a in range(1, 201, 1):
+#     for b in range(1, 201, 1):
+#         for c in range(1, 201, 1):
+#             d = (a + b) - c
+#             if d >= 1 and d <= 200:
+#                 cnt+=1
+# print(cnt)
+
+# # For Loops Find All Quadruples Ins Answer 4 Loops *****************
+
+# count = 0
+# for a in range(1, 201):
+#     for b in range(1, 201):
+#         for c in range(1, 201):
+#             for d in range(1, 201):
+#                 count += (a + b == c + d)
+
+# print(count)
+
+# # For Loops Find All Quadruples Ins Answer 3 Loops *****************
+
+# count = 0
+# for a in range(1, 201):
+#     for b in range(1, 201):
+#         for c in range(1, 201):
+#             d = a + b - c   # lets' compute d
+#             if 1 <= d <= 200:
+#                 count += 1
+
+# print(count)
+
+# # For Loops Homework / Is Prime My Answer ***************************
+
+# n = int(input())
+# ans = str
+
+# for i in range(n, 1, -1):
+#     if n % i != 0:
+#         ans = "Yes"
+#     else:
+#         ans = "No"
+
+# print(ans)
+
+# # For Loops Homework / Is Prime Ins Answer ***************************
+
+#  # I Forgot to Exlude 1 From Input ***********************************
+
+# number = int(input())
+
+# if number <= 1:
+#     print("NO")
+# else:
+#     is_ok = True
+
+#     for i in range(2, number):
+#         if number % i == 0:
+#             is_ok = False
+#             break
+
+#     if is_ok:
+#         print("YES")
+#     else:
+#         print("NO")
+
+# # Homework For loops 5 / Print the prime Numbers / Instructor Answer
+
+# max_num = int(input())
+
+# for number in range(2, max_num+1):
+#     is_ok = True
+
+#     for i in range(2, number):
+#         if number % i == 0:
+#             is_ok = False
+#             break
+
+#     if is_ok:
+#         print(number, end=' ')
+
+
+# # For Loops / Digits Sum / My Answer / Doesn;t work at all !!!!!!!!!
+# # I Saved it just to compare Logic between it and working code!!!!!!
+
+# n, a, b = map(int, input().split())
+# ans = 0
+# c = 0
+# res = 0
+# for i in range(1, n+1):
+#     if i < 10 and i >= a and i <= b:
+#         ans += i
+#     elif i >= 10:
+#         while i > 0:
+#             c = i % 10
+#             i //= 10
+#             res +=c 
+#             if res >= a and res <= b:
+#                 ans += i
+# print(ans)
+
+#  # Instructors Answer **********************************************
+
+# n, a, b = map(int, input().split())
+# total = 0
+
+# for i in range(1, n+1):
+#     tmp = i     # be careful - take copy
+#     digits_sum = 0
+
+#     while tmp > 0:
+#         digits_sum += tmp % 10
+#         tmp //= 10
+
+#     if a <= digits_sum <= b:
+#         total += i
+
+# print(total)
+
+# # Functions Homework Problem #1 / Instructor Solution **************************
+
+# def special_multiplication(string):
+#     result = ''
+#     for idx, char in enumerate(string):
+#         result += char * (idx + 1)
+#     return result
+
+# print(special_multiplication('abcxf'))
+
+# Functions Homework #2 / Instructor Solution ****************************************
+
+# def my_max2(a, b):
+#     if a > b:
+#         return a
+#     return b
+
+    
+# def my_max3(a, b, c):
+#     return my_max2(a, my_max2(b, c))
+
+
+# def my_max4(a, b, c, d):
+#     return my_max2(a, my_max3(b, c, d))
+
+
+# def my_max5(a, b, c, d, e):
+#     return my_max2(a, my_max4(b, c, d, e))
+
+
+# def my_max6(a, b, c, d, e, f):
+#     return my_max2(a, my_max5(b, c, d, e, f))
+
+
+# print(my_max6(1, 2, 3, 8, 4, 5))
