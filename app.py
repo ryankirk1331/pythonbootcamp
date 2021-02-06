@@ -1,36 +1,17 @@
-# # For Loops / Digits Sum / My Answer / Doesn;t work at all !!!!!!!!!
-# # I Saved it just to compare Logic between it and working code!!!!!!
+def our_abs(num):
+    if num >= 0:
+        return num
+    return -num
 
-# n, a, b = map(int, input().split())
-# ans = 0
-# c = 0
-# res = 0
-# for i in range(1, n+1):
-#     if i < 10 and i >= a and i <= b:
-#         ans += i
-#     elif i >= 10:
-#         while i > 0:
-#             c = i % 10
-#             i //= 10
-#             res +=c 
-#             if res >= a and res <= b:
-#                 ans += i
-# print(ans)
 
-#  # Instructors Answer **********************************************
+def our_max2(first, second):
+    first = our_abs(first)
+    second = our_abs(second)
 
-# n, a, b = map(int, input().split())
-# total = 0
+    if first > second:
+        return first
+    return second
 
-# for i in range(1, n+1):
-#     tmp = i     # be careful - take copy
-#     digits_sum = 0
+print(our_max2(2, 5))
+print(our_max2(2, -5))
 
-#     while tmp > 0:
-#         digits_sum += tmp % 10
-#         tmp //= 10
-
-#     if a <= digits_sum <= b:
-#         total += i
-
-# print(total)
