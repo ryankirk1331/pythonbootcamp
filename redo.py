@@ -9,3 +9,6 @@
 
 # Functions Homework Problem #1
 # Functions Homework Problem #2
+# Functions Homework Problem #3
+# Functions Homework Problem #4
+

@@ -1664,3 +1664,82 @@
 
 
 # print(my_max6(1, 2, 3, 8, 4, 5))
+
+# # Functions Homework / Get nth prime / My Answer/ with help on 2nd **********************
+
+# def is_prime(n):
+#     if n <= 1:
+#         is_ok = False
+#     else:
+#         is_ok = True
+#     for i in range(2, n, 1):
+#         if n % i == 0:
+#             is_ok = False
+#             break
+#     return(is_ok)
+# print(is_prime(20))
+
+# def nth_prime(n):
+#     for number in range(2, n+1):
+#         is_ok = True
+
+#         for i in range (2, number):
+#             if number % 2 == 0:
+#                 is_ok = False
+#                 break
+#         if is_ok:
+#             print(number,' ')
+
+# print(nth_prime(20))
+
+# # Functions Homework / Is Prime + Print Prime / Instructor Answer ************************
+
+# def is_prime(num):
+#     if num <= 1:
+#         return False
+
+#     for i in range(2, num):
+#         if num % i == 0:
+#             return False
+
+#     return True
+
+
+# def nth_prime(n):
+#     start = 2
+#     while n > 0:
+#         if is_prime(start):
+#             n -= 1
+#             if n == 0:
+#                 return start
+#         start += 1
+
+#     return -1   # not reachable
+
+
+# for i in range(1, 10):
+#     print(i, nth_prime(i))
+
+# # Functions Homework #4 / Instructors Answer / Fibonacci ***************************
+
+# def nth_fib(n):
+
+#     if n == 1:
+#         return 0
+#     if n == 2:
+#         return 1
+#     # note: we can merge above 2 lines in single condition. Try
+
+#     a, b = 0, 1
+#     n -= 2
+
+#     while n > 0:
+#         c = a + b
+#         a = b
+#         b = c
+#         n -= 1
+#     return c
+
+
+# for i in range(1, 10):
+#     print(i, nth_fib(i))
