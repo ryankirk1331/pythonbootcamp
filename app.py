@@ -1,73 +1,69 @@
-def calculator_interface():
-    print_menu()
-    N = int(input())
-        
-    while N != 3:
-        if N == 1:
-            sum_1_to_N()
-        elif N == 2:
-            expression()
-        else:
-            break
-    
-def print_menu():
-    print('Enter 1 to sum numbers 1 to N: ')
-    print('Enter 2 to perfor the calculation of an expression: ')
-    print('Enter 3 to exit the Special Calculator: ')
-    
+# # Classes and Objects Homework #2 / Instructor answer *********************************
 
 
-def sum_1_to_N():
-    N = int(input())
-    sum = 0
-    sum = N * (N+1) / 2
-    print(f'The sum from 1 to N is 1: {sum}')
-    calculator_interface()
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def get_area(self):
+        return self.width * self.height
 
 
-def expression():
-    res = 0
-    a, operator, b = input('Enter a regular expression: ').split()
-    a, b = float(a), float (b)
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
 
-    if operator == '+':
-        res = a + b
-        print(f'{a} + {b} = {res}')
-    elif operator == '-':
-        res = a - b
-        print(f'{a} - {b} = {res}')
-    elif operator == '*':
-        res = a * b
-        print(f'{a} * {b} = {res}')
-    elif operator == '**':
-        res = a ** b
-        print(f'{a} ** {b} = {res}')
-    else:
-        result = divide(a, operator, b)
-    
-    calculator_interface()
+    def get_area(self):
+        return 3.14 * self.radius * self.radius
 
 
-def divide(a, operator, b):
-    product = 0
-    if b == 0:
-        print('not a valid entry!')
-    else:
-        product = a / b
-    print(f'{a} / {b} = {product}')
-calculator_interface()
+class Editor:
+    def __init__(self):
+        self.rect = None
+        self.circle = None
 
+    def create_rectangle(self, width, height):
+        self.rect = Rectangle(width, height)
 
-    
-        
+    def create_circle(self, radius):
+        self.circle = Circle(radius)
+
+    def change_rectangle(self, factor):
+        if self.rect == None:       # we should use is None (soon)
+            return
+
+        width, height = self.rect.width + factor, self.rect.height + factor
+        self.create_rectangle(width, height)
+
+    def change_circle(self, factor):
+        if self.circle == None:       # we should use is None (soon)
+            return
+
+        self.create_circle(self.circle.radius + factor)
+
+    def change(self, factor):
+        self.change_rectangle(factor)
+        self.change_circle(factor)
+
+    def print(self):
+        if self.rect != None:
+            print('Rectangle area', self.rect.get_area())
+
+        if self.circle != None:
+            print('Circle area', self.circle.get_area())
 
 
 
-
-
-
-
-   
+editor = Editor()
+editor.create_rectangle(3, 5)
+editor.print()
+#Rectangle area 15
+editor.create_circle(5)
+editor.change(2)
+editor.print()
+#Rectangle area 35
+#Circle area 153.86
             
 
 

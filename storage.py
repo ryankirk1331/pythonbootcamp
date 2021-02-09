@@ -1883,3 +1883,218 @@
 
 # calculator_interface()
 
+# # Constructor Example ********************************************************************
+
+# class Employee:
+#     def __init__(self, name, salary, address):
+#         self.name = name 
+#         self.salary = salary
+#         self.address = address 
+
+#     def print(self):
+#         print('Employee Name: ', self.name)
+#         print('Employee salary: ', self.salary)
+#         print('Employee address: ', self.address)
+
+# Ryan = Employee('Ryan Travis Kirkpatrick', 200, 'Jet OK')
+# Ryan.print()
+
+# Example with Multiple Classes *********************************************************
+
+# class FullName:
+#     def __init__(self, first_name, last_name):
+#         self.first_name = first_name
+#         self.middle_name = None
+#         self.last_name = last_name
+    
+# class Employee:
+#     def __init__(self, first_name, last_name, salary, address):
+#         self.full_name = FullName(first_name, last_name)
+#         self.salary = salary
+#         self.address = address
+
+#         def print(self):
+#             print('Employee name: ',
+#                 self.full_name.first_name+ " " +self.full_name.last_name)
+#             print('Employee salary: ', self.salary)
+#             print('Employee address: ', self.address)
+
+# ryan = Employee('Ryan','Kirkpatrick', 159, 'Jet OK')
+# ryan.print()
+
+# # Objects and Classes / Homework #1 / My Answer / Works Well *************************
+
+# class Rectangle:
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width
+        
+#     def get_area(self):
+#         return self.length * self.width
+
+        
+# class Circle:
+#     def __init__(self, radius):
+#         self.radius = radius
+    
+#     def get_area(self):
+#         return 3.14 * self.radius ** 2
+
+# r = Rectangle(2, 5)
+# print(r.get_area())
+
+# c = Circle(5)
+# print(c.get_area())
+        
+# # Objects and Classes / Homework #1 / Instructor Answer  ***************************   
+     
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+
+#     def get_area(self):
+#         return self.width * self.height
+
+
+# class Circle:
+#     def __init__(self, radius):
+#         self.radius = radius
+
+#     def get_area(self):
+#         return 3.14 * self.radius * self.radius
+
+
+# r = Rectangle(2, 5)
+# print(r.get_area())     # 10
+
+# c = Circle(5)
+# print(c.get_area())     # 78.5
+
+# Classes and Objects / Homework 2 / Mine doesn't work ***********************************
+
+# class Rectangle:
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width
+        
+#     def get_area(self):
+#         return self.length * self.width
+
+# class Circle:
+#     def __init__(self, radius):
+#         self.radius = radius
+    
+#     def get_area(self):
+#         return 3.14 * self.radius ** 2
+
+# class Editor:
+#     def __init__(self):
+#        self.rect = None
+#        self.circle = None
+    
+#     def create_rectangle(self, length, width):
+#         self.rect = Rectangle(length, width)
+        
+#     def create_circle(self, radius):
+#         self.circle = Circle(radius)
+        
+
+#     def change_rectangle(self, factor):
+#         if self.rect == None:
+#             return
+        
+#         width, length = self.rect.width + factor, self.rect.length + factor
+#         self.create_rectangle(width, height)
+    
+#     def change_cirle(self, factor):
+#         if self.circle == None:
+#             return
+        
+#         self.create_circle(self.circle.radius + factor)
+        
+#     def print(self):
+#         if self.rect != None:
+#             print('Rectangle area', self.rect.get_area())
+
+#         if self.circle != None:
+#             print('Circle area', self.circle.get_area())
+
+# editor = Editor()
+# editor.create_rectangle(3, 5)
+# editor.print()
+# # rectangle area 15
+# editor.create_circle(5)
+# editor.change(2)
+# editor.print()
+# #Rectangle area 35
+# #Circle area 153.86
+
+
+# # # Classes and Objects Homework #2 / Instructor answer *********************************
+
+
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+
+#     def get_area(self):
+#         return self.width * self.height
+
+
+# class Circle:
+#     def __init__(self, radius):
+#         self.radius = radius
+
+#     def get_area(self):
+#         return 3.14 * self.radius * self.radius
+
+
+# class Editor:
+#     def __init__(self):
+#         self.rect = None
+#         self.circle = None
+
+#     def create_rectangle(self, width, height):
+#         self.rect = Rectangle(width, height)
+
+#     def create_circle(self, radius):
+#         self.circle = Circle(radius)
+
+#     def change_rectangle(self, factor):
+#         if self.rect == None:       # we should use is None (soon)
+#             return
+
+#         width, height = self.rect.width + factor, self.rect.height + factor
+#         self.create_rectangle(width, height)
+
+#     def change_circle(self, factor):
+#         if self.circle == None:       # we should use is None (soon)
+#             return
+
+#         self.create_circle(self.circle.radius + factor)
+
+#     def change(self, factor):
+#         self.change_rectangle(factor)
+#         self.change_circle(factor)
+
+#     def print(self):
+#         if self.rect != None:
+#             print('Rectangle area', self.rect.get_area())
+
+#         if self.circle != None:
+#             print('Circle area', self.circle.get_area())
+
+
+
+# editor = Editor()
+# editor.create_rectangle(3, 5)
+# editor.print()
+# #Rectangle area 15
+# editor.create_circle(5)
+# editor.change(2)
+# editor.print()
+# #Rectangle area 35
+# #Circle area 153.86
+   
