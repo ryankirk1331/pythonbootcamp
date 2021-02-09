@@ -1743,3 +1743,143 @@
 
 # for i in range(1, 10):
 #     print(i, nth_fib(i))
+
+# # Functions Home Work / Application / My Solution *************************************
+
+# def calculator_interface():
+#     print_menu()
+#     N = int(input())
+        
+#     while N != 3:
+#         if N == 1:
+#             sum_1_to_N()
+#         elif N == 2:
+#             expression()
+#         else:
+#             break
+    
+# def print_menu():
+#     print('Enter 1 to sum numbers 1 to N: ')
+#     print('Enter 2 to perfor the calculation of an expression: ')
+#     print('Enter 3 to exit the Special Calculator: ')
+    
+
+
+# def sum_1_to_N():
+#     N = int(input())
+#     sum = 0
+#     sum = N * (N+1) / 2
+#     print(f'The sum from 1 to N is 1: {sum}')
+#     calculator_interface()
+
+
+# def expression():
+#     res = 0
+#     a, operator, b = input('Enter a regular expression: ').split()
+#     a, b = float(a), float (b)
+
+#     if operator == '+':
+#         res = a + b
+#         print(f'{a} + {b} = {res}')
+#     elif operator == '-':
+#         res = a - b
+#         print(f'{a} - {b} = {res}')
+#     elif operator == '*':
+#         res = a * b
+#         print(f'{a} * {b} = {res}')
+#     elif operator == '**':
+#         res = a ** b
+#         print(f'{a} ** {b} = {res}')
+#     else:
+#         result = divide(a, operator, b)
+    
+#     calculator_interface()
+
+
+# def divide(a, operator, b):
+#     product = 0
+#     if b == 0:
+#         print('not a valid entry!')
+#     else:
+#         product = a / b
+#     print(f'{a} / {b} = {product}')
+# calculator_interface()
+
+# # Functions Homework / Application / Instructors Solution **********************************
+
+# #Your ToDo: Provide Docstring for every function
+
+# def print_menu():
+#     while True:
+#         print('\n\nMenu:')
+#         print('Enter 1 to sum numbers from 1 to N')
+#         print('Enter 2 to evaluate simple 2 numbers expression (e.g. 2 + 3)')
+#         print('Enter 3 to end the program')
+
+#         user_inp = input('\nEnter choice from 1 to 3: ')
+
+#         if user_inp != '1' and user_inp != '2' and user_inp != '3':
+#             print('Invalid Input...Try again')
+#             continue
+#         else:
+#             return user_inp
+
+
+# def sum_1_to_n():
+#     n = int(input('Enter a number: '))
+#     sum = (n * (n+1))//2
+#     print('Sum from 1 to', n, 'is', sum)
+
+
+# def divide(num1, num2, operation):
+#     # / or //
+
+#     #  See this function prints nothing. This is a better design
+#     # It is only responsible to compute answer if possible
+#     # someone else should print
+
+#     if num2 == 0:
+#         result = None
+#     elif operation == '/':
+#         result = num1 / num2
+#     else:
+#         result = num1 // num2
+
+#     return result
+
+
+# def expression():
+#     num1, operation, num2 = input('Enter a simple expression: ').split()
+#     num1, num2 = float(num1), float(num2)
+
+#     if operation == '+':
+#         result = num1 + num2
+#     elif operation == '-':
+#         result = num1 - num2
+#     elif operation == '*':
+#         result = num1 * num2
+#     elif operation == '**':
+#         result = num1 ** num2
+#     else:
+#         result = divide(num1, num2, operation)
+
+#     if result != None:
+#         print('Expression value is ', result)
+#     else:
+#         print('Sorry: No way to compute this expression')
+
+
+# def calculator_interface():
+#     while True:
+#         user_inp = print_menu()
+
+#         if user_inp == '1':
+#             sum_1_to_n()
+#         elif user_inp == '2':
+#             expression()
+#         else:
+#             break
+
+
+# calculator_interface()
+
