@@ -2098,3 +2098,117 @@
 # #Rectangle area 35
 # #Circle area 153.86
    
+# # # Dunder STR Example ******************************************************************
+
+# class Employee:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def __str__(self):
+#         return 'Employee ' + self.name + ' is ' + str(self.age) + ' years old'
+
+# most = Employee('mostafa', 33)
+
+# print(most)
+# s = str(most)
+
+# print(most.__str__())
+
+# # # Dunder REPR Example ******************************************************************
+
+# class Employee:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def __repr__(self):
+#         return 'Employee ' + self.name + ' is ' + str(self.age) + ' years old' + ' **'
+
+# most = Employee('mostafa', 33)
+
+# print(most)
+
+
+# print(str(most))
+# print(repr(most))
+
+# # !!!!!!!!!!!!!!!!!!!!!!! Why Both STR && REPR / STR => Users / REPR => DEVS 
+## STR => Easily Readable / REPR Should look like something we could use to build an object
+
+# class Employee:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def __str__(self):
+#         return 'Employee ' + self.name + ' is ' + str(self.age) + ' years old'
+
+#     def __repr__(self):
+#         return 'Employee(name="' + self.name + '", + age=' + str(self.age) + ')'
+    
+
+# most = Employee('mostafa', 33)
+
+# print(most)
+
+
+# print(str(most))
+# print(repr(most))
+
+# # Objects and Classes / Homework #2 / Problem #1 / Instructor Answer *****************
+
+# class MyRange:
+
+#     def __init__(self, start, end, step):
+#         self.start = start
+#         self.end = end
+#         self.step = step
+        
+
+#     def has_next(self):
+#         return self.start < self.end
+    
+#     def get_next(self):
+#         ret = self.start
+#         self.start += self.step
+#         return ret
+
+# rng = MyRange(5, 10, 1)
+
+# while rng.has_next():
+#     print(rng.get_next(), end=' ')
+# print()
+
+# rng = MyRange(5, 10, 2)
+
+# while rng.has_next():
+#     print(rng.get_next(), end=' ')     
+
+# Objects and Classes / Homework #2 / Problem #2/ Instructor Answer *****************
+
+# class MyRange:
+
+#     def __init__(self, start, end, step):
+#         self.start = start
+#         self.end = end
+#         self.step = step
+#         self.idx = 0
+        
+
+#     def has_next(self):
+#         if self.step > 0:
+#             return self.start < self.end
+#         return self.start > self.end
+    
+#     def get_next(self):
+#         ret = self.idx, self.start
+#         self.start += self.step
+#         self.idx += 1
+        
+#         return ret
+
+# rng = MyRange(10, 5, -1)
+
+# while rng.has_next():
+#     print(rng.get_next())
